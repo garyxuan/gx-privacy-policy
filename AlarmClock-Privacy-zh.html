@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ChineseAlarmClock 隐私政策</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f4f7fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --sub: #4b5563;
+      --line: #dbe2ea;
+      --accent: #0f766e;
+      --accent-soft: #dff5f2;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: radial-gradient(circle at top right, #e9f6ff 0, var(--bg) 45%);
+      color: var(--text);
+      font: 16px/1.72 -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB",
+            "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+    }
+    .wrap {
+      width: min(920px, calc(100% - 32px));
+      margin: 40px auto 64px;
+    }
+    .hero {
+      padding: 28px 28px 22px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: linear-gradient(120deg, #ffffff 0%, #f6fffd 100%);
+      box-shadow: 0 10px 30px rgba(22, 48, 90, 0.08);
+    }
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(28px, 4vw, 40px);
+      line-height: 1.15;
+      letter-spacing: 0.2px;
+    }
+    .meta {
+      margin: 0;
+      color: var(--sub);
+      font-size: 14px;
+    }
+    .note {
+      margin-top: 14px;
+      padding: 10px 12px;
+      border-radius: 10px;
+      background: var(--accent-soft);
+      color: #134e4a;
+      font-size: 14px;
+    }
+    .card {
+      margin-top: 16px;
+      padding: 24px 24px 10px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--card);
+    }
+    h2 {
+      margin: 0 0 10px;
+      font-size: 22px;
+      color: #0f172a;
+    }
+    p, li {
+      color: var(--text);
+      margin: 0 0 10px;
+    }
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+    .table-wrap {
+      overflow-x: auto;
+      margin: 8px 0 16px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 660px;
+      font-size: 14px;
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 10px 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: #f8fafc;
+      color: #0f172a;
+      font-weight: 600;
+    }
+    .footer {
+      margin-top: 18px;
+      color: var(--sub);
+      font-size: 13px;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <h1>隐私政策</h1>
+      <p class="meta">适用于 ChineseAlarmClock（以下简称“本应用”）</p>
+      <p class="meta">生效日期：2026年2月27日</p>
+      <p class="meta">更新日期：2026年2月27日</p>
+      <p class="note">
+        本应用为闹钟工具，当前版本不提供账号系统，不接入广告 SDK，不进行个性化推荐。
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>1. 我们如何处理信息</h2>
+      <p>
+        为实现闹钟功能，本应用会在你的设备本地处理与闹钟相关的数据。除法律法规另有要求外，
+        我们不会将你的个人信息上传至开发者服务器。
+      </p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>信息类型</th>
+              <th>示例</th>
+              <th>处理目的</th>
+              <th>存储位置</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>你主动输入的闹钟信息</td>
+              <td>时间、标签、重复规则、稍后提醒时长</td>
+              <td>创建与管理闹钟，展示下次提醒时间</td>
+              <td>仅设备本地</td>
+            </tr>
+            <tr>
+              <td>闹钟运行状态信息</td>
+              <td>授权状态、同步状态、下一次触发信息</td>
+              <td>保证闹钟按预期触发并在界面中展示状态</td>
+              <td>仅设备本地</td>
+            </tr>
+            <tr>
+              <td>内置节假日规则数据</td>
+              <td>法定节假日与调休日期（内置文件）</td>
+              <td>支持“法定工作日”重复规则</td>
+              <td>应用内置资源</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>2. 权限说明</h2>
+      <ul>
+        <li><strong>AlarmKit 权限：</strong>用于创建和管理系统级闹钟提醒。</li>
+      </ul>
+      <p>
+        你可以在 iOS“设置”中撤回相关权限。撤回后，本应用可能无法正常创建或更新闹钟。
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>3. 我们不会做什么</h2>
+      <ul>
+        <li>不会出售、出租你的个人信息。</li>
+        <li>不会将你的闹钟数据用于广告投放或跨应用跟踪。</li>
+        <li>不会在未经你同意的情况下收集与闹钟功能无关的敏感信息。</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>4. 信息共享与披露</h2>
+      <p>
+        我们不会主动向第三方共享你的个人信息。仅在以下情形下，才可能依法披露必要信息：
+      </p>
+      <ul>
+        <li>依据适用法律法规、司法或行政机关的合法要求；</li>
+        <li>为保护你、其他用户或公众的人身与财产安全所必需。</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>5. 信息存储与安全</h2>
+      <ul>
+        <li>闹钟数据默认存储在你的设备本地应用沙盒中。</li>
+        <li>你删除闹钟或卸载本应用后，相关本地数据会随之删除或不可再访问。</li>
+        <li>我们采取合理措施保护本地数据安全，但请你同时做好设备锁屏与系统安全更新。</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>6. 未成年人保护</h2>
+      <p>
+        如你为未成年人，请在监护人指导下使用本应用并阅读本政策。
+        监护人如对未成年人信息处理有疑问，可通过下方联系方式与我们联系。
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>7. 你的权利</h2>
+      <ul>
+        <li>你可以在应用内查看、修改、删除自己创建的闹钟信息。</li>
+        <li>你可以通过系统设置管理或撤回授权。</li>
+        <li>你可以通过卸载应用停止本应用继续处理你的本地闹钟数据。</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>8. 政策更新</h2>
+      <p>
+        当产品功能或法律法规发生变化时，我们可能更新本政策。更新后将通过应用内或发布页进行公示，
+        并以更新日期为准生效。
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>9. 联系我们</h2>
+      <p>
+        如你对本隐私政策有任何问题、意见或建议，请联系：
+      </p>
+      <ul>
+        <li>联系邮箱：<a href=garyxuan@163.com">support@example.com</a></li>
+        <li>或通过 App Store 的“App 支持”页面与我们联系。</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
