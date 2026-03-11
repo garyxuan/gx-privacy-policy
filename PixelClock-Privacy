@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Clock - Privacy Policy</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: #000;
+            color: #33FF33;
+            padding: 40px 20px;
+            line-height: 1.8;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 28px;
+            font-family: monospace;
+            margin-bottom: 8px;
+            letter-spacing: 2px;
+        }
+        h2 {
+            font-size: 18px;
+            font-family: monospace;
+            margin-top: 32px;
+            margin-bottom: 12px;
+            color: #33FF33;
+            letter-spacing: 1px;
+        }
+        p, li {
+            font-size: 15px;
+            color: #aaa;
+            margin-bottom: 12px;
+        }
+        ul {
+            padding-left: 24px;
+            margin-bottom: 12px;
+        }
+        li { margin-bottom: 6px; }
+        .subtitle {
+            font-size: 14px;
+            color: #666;
+            font-family: monospace;
+            margin-bottom: 32px;
+        }
+        .highlight { color: #33FF33; }
+        hr {
+            border: none;
+            border-top: 1px solid #1a3a1a;
+            margin: 32px 0;
+        }
+        .footer {
+            margin-top: 48px;
+            font-size: 13px;
+            color: #444;
+            text-align: center;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Pixel Clock</h1>
+<p class="subtitle">Privacy Policy / 隐私政策</p>
+
+<hr>
+
+<h2>// Overview</h2>
+<p>Pixel Clock is a pixel-art style clock app designed for iOS StandBy mode. We take your privacy seriously — in fact, we don't collect any of it.</p>
+<p>Pixel Clock 是一款像素风格的时钟应用，专为 iOS 待机模式设计。我们非常重视您的隐私——事实上，我们不收集任何隐私数据。</p>
+
+<h2>// Data Collection</h2>
+<p><span class="highlight">We collect zero data.</span> Specifically:</p>
+<ul>
+    <li>No personal information</li>
+    <li>No usage analytics or tracking</li>
+    <li>No location data</li>
+    <li>No cookies or identifiers</li>
+    <li>No third-party SDKs or ad networks</li>
+    <li>No network requests of any kind</li>
+</ul>
+<p>我们<span class="highlight">不收集任何数据</span>。具体来说：不收集个人信息、不进行使用分析或追踪、不获取位置数据、不使用 Cookie 或标识符、不集成第三方 SDK 或广告网络、不发起任何网络请求。</p>
+
+<h2>// Data Storage</h2>
+<p>Your settings (font style, time format, date display preference) are stored <span class="highlight">locally on your device only</span> using iOS built-in storage. This data never leaves your device.</p>
+<p>您的设置（字体风格、时间格式、日期显示偏好）仅通过 iOS 内置存储<span class="highlight">保存在您的设备本地</span>。这些数据绝不会离开您的设备。</p>
+
+<h2>// Third-Party Services</h2>
+<p>Pixel Clock does not integrate any third-party services, analytics tools, crash reporters, or advertising frameworks. The app runs entirely offline.</p>
+<p>Pixel Clock 未集成任何第三方服务、分析工具、崩溃报告或广告框架。应用完全离线运行。</p>
+
+<h2>// Children's Privacy</h2>
+<p>Pixel Clock does not collect data from anyone, including children under 13. The app is safe for users of all ages.</p>
+<p>Pixel Clock 不收集任何人的数据，包括 13 岁以下儿童。本应用对所有年龄段的用户都是安全的。</p>
+
+<h2>// Changes to This Policy</h2>
+<p>If we ever update this privacy policy, changes will be reflected on this page with an updated effective date.</p>
+<p>如果我们更新本隐私政策，更改将在此页面上体现，并更新生效日期。</p>
+
+<h2>// Contact</h2>
+<p>If you have any questions about this privacy policy, please contact us at:</p>
+<p>如果您对本隐私政策有任何疑问，请通过以下方式联系我们：</p>
+<p><span class="highlight">garyxuan@163.com</span></p>
+
+<hr>
+
+<p class="footer">Effective Date: March 11, 2026 · 生效日期：2026 年 3 月 11 日</p>
+
+</body>
+</html>
