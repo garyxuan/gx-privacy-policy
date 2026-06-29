@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Privacy Policy for the Radio app.">
+  <title>Privacy Policy · Radio</title>
+  <style>
+    :root {
+      --page: #f8f9fc;
+      --surface: rgba(255, 255, 255, 0.86);
+      --surface-solid: #ffffff;
+      --text: #151524;
+      --muted: #626477;
+      --line: #e4e5ec;
+      --primary: #4338ca;
+      --primary-soft: #eeedff;
+      --accent: #22c55e;
+      --shadow: 0 18px 60px rgba(30, 27, 75, 0.08);
+      --content: 1110px;
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      min-width: 320px;
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 12% -10%, rgba(67, 56, 202, 0.11), transparent 28rem),
+        var(--page);
+      font-size: 16px;
+      line-height: 1.72;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--primary); }
+
+    a:hover { text-decoration-thickness: 2px; }
+
+    button,
+    input { font: inherit; }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid rgba(228, 229, 236, 0.86);
+      background: rgba(248, 249, 252, 0.82);
+      backdrop-filter: blur(20px) saturate(150%);
+      -webkit-backdrop-filter: blur(20px) saturate(150%);
+    }
+
+    .header-inner,
+    .page,
+    .footer-inner {
+      width: min(calc(100% - 40px), var(--content));
+      margin-inline: auto;
+    }
+
+    .header-inner {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      color: var(--text);
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing: -0.035em;
+      text-decoration: none;
+    }
+
+    .search {
+      position: relative;
+      width: min(310px, 40vw);
+    }
+
+    .search svg {
+      position: absolute;
+      top: 50%;
+      left: 14px;
+      width: 18px;
+      transform: translateY(-50%);
+      color: var(--muted);
+      pointer-events: none;
+    }
+
+    .search input {
+      width: 100%;
+      height: 42px;
+      padding: 0 14px 0 42px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      outline: none;
+      color: var(--text);
+      background: var(--surface-solid);
+      transition: border-color 160ms ease, box-shadow 160ms ease;
+    }
+
+    .search input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 4px rgba(67, 56, 202, 0.11);
+    }
+
+    .page {
+      display: grid;
+      grid-template-columns: 230px minmax(0, 1fr);
+      gap: 54px;
+      padding-block: 66px 96px;
+    }
+
+    .toc {
+      position: sticky;
+      top: 112px;
+      align-self: start;
+    }
+
+    .toc-label {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 0.74rem;
+      font-weight: 750;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    .toc a {
+      display: block;
+      padding: 7px 10px;
+      border-radius: 8px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.35;
+      text-decoration: none;
+    }
+
+    .toc a:hover,
+    .toc a:focus-visible {
+      color: var(--primary);
+      background: var(--primary-soft);
+    }
+
+    .policy {
+      min-width: 0;
+      padding: clamp(28px, 5vw, 58px);
+      border: 1px solid rgba(228, 229, 236, 0.9);
+      border-radius: 26px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 14px;
+      color: var(--primary);
+      font-size: 0.8rem;
+      font-weight: 750;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.4rem, 6vw, 4.5rem);
+      line-height: 1.03;
+      letter-spacing: -0.055em;
+    }
+
+    .updated {
+      margin: 18px 0 30px;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .intro {
+      margin: 0;
+      color: #353649;
+      font-size: 1.09rem;
+    }
+
+    .notice {
+      margin: 30px 0 0;
+      padding: 20px 22px;
+      border: 1px solid rgba(67, 56, 202, 0.16);
+      border-left: 4px solid var(--primary);
+      border-radius: 12px;
+      background: var(--primary-soft);
+    }
+
+    .notice strong { display: block; margin-bottom: 3px; }
+
+    .policy-section {
+      scroll-margin-top: 112px;
+      padding-top: 42px;
+    }
+
+    .policy-section + .policy-section {
+      margin-top: 42px;
+      border-top: 1px solid var(--line);
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      font-size: 1.35rem;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+    h3 {
+      margin: 25px 0 8px;
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+
+    p { margin: 0 0 16px; }
+
+    ul {
+      margin: 12px 0 18px;
+      padding-left: 1.35rem;
+    }
+
+    li { margin: 8px 0; padding-left: 4px; }
+
+    .policy-section[hidden] { display: none; }
+
+    .no-results {
+      display: none;
+      margin-top: 34px;
+      padding: 24px;
+      border: 1px dashed var(--line);
+      border-radius: 14px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .site-footer {
+      color: #d7d9e8;
+      background: #0f0f23;
+    }
+
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 46px;
+      padding-block: 54px 30px;
+    }
+
+    .footer-brand { color: white; }
+
+    .footer-copy {
+      max-width: 470px;
+      margin: 17px 0 0;
+      color: #aeb1c8;
+      font-size: 0.94rem;
+    }
+
+    .footer-heading {
+      margin: 4px 0 13px;
+      color: white;
+      font-size: 0.82rem;
+      font-weight: 750;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .footer-links { margin: 0; padding: 0; list-style: none; }
+    .footer-links li { margin: 8px 0; padding: 0; }
+    .footer-links a { color: #c6c8d8; text-decoration: none; }
+    .footer-links a:hover { color: white; }
+
+    .copyright {
+      grid-column: 1 / -1;
+      margin-top: 12px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.11);
+      color: #898da7;
+      font-size: 0.84rem;
+    }
+
+    @media (max-width: 800px) {
+      .header-inner,
+      .page,
+      .footer-inner { width: min(calc(100% - 28px), var(--content)); }
+
+      .header-inner { min-height: 68px; }
+      .search { width: min(220px, 48vw); }
+      .page { display: block; padding-block: 34px 62px; }
+      .toc { display: none; }
+      .policy { border-radius: 20px; }
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+      .footer-intro { grid-column: 1 / -1; }
+    }
+
+    @media (max-width: 520px) {
+      .search { width: calc(100% - 58px); }
+      .policy { padding: 25px 20px 34px; }
+      .footer-inner { grid-template-columns: 1fr; gap: 28px; }
+      .footer-intro,
+      .copyright { grid-column: auto; }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --page: #0f0f23;
+        --surface: rgba(30, 27, 75, 0.44);
+        --surface-solid: #1b1938;
+        --text: #f8fafc;
+        --muted: #a9acc2;
+        --line: rgba(248, 250, 252, 0.13);
+        --primary: #9f98ff;
+        --primary-soft: rgba(67, 56, 202, 0.21);
+        --shadow: 0 22px 70px rgba(0, 0, 0, 0.22);
+      }
+
+      body { background: radial-gradient(circle at 12% -10%, rgba(67, 56, 202, 0.34), transparent 30rem), var(--page); }
+      .site-header { background: rgba(15, 15, 35, 0.8); border-bottom-color: var(--line); }
+      .intro { color: #d9dbea; }
+      .notice { border-color: rgba(159, 152, 255, 0.25); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      * { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="Radio home">
+        <span class="brand-text">Radio</span>
+      </a>
+      <label class="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle>
+          <path d="m20 20-4-4"></path>
+        </svg>
+        <span style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0">Search this policy</span>
+        <input id="policy-search" type="search" placeholder="Search this policy…" autocomplete="off">
+      </label>
+    </div>
+  </header>
+
+  <main id="top" class="page">
+    <nav class="toc" aria-label="Privacy policy sections">
+      <p class="toc-label">On this page</p>
+      <a href="#information">Information we process</a>
+      <a href="#use">How information is used</a>
+      <a href="#third-parties">Third-party services</a>
+      <a href="#sharing">Sharing and disclosure</a>
+      <a href="#storage">On-device storage</a>
+      <a href="#children">Children’s privacy</a>
+      <a href="#rights">Your choices and rights</a>
+      <a href="#security">Security</a>
+      <a href="#changes">Policy changes</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <article class="policy">
+      <p class="eyebrow">Radio app</p>
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last Updated: June 29, 2026</p>
+      <p class="intro">Your privacy matters to us. This Privacy Policy explains what information is processed when you use the Radio mobile application (the “App”), where that processing occurs, and the choices available to you.</p>
+
+      <div class="notice">
+        <strong>The short version</strong>
+        Radio does not require an account and does not include advertising or first-party analytics. Favorites, listening history, settings, and cached station data are stored locally on your device. Streaming, station discovery, voting, and optional song recognition require connections to third-party services.
+      </div>
+
+      <section id="information" class="policy-section" data-searchable>
+        <h2>1. Information We Process</h2>
+        <h3>Information you do not need to provide</h3>
+        <p>Radio does not require registration. We do not ask for your name, phone number, postal address, password, payment information, or precise location.</p>
+
+        <h3>Information stored on your device</h3>
+        <p>The App stores the following information locally so its features can work:</p>
+        <ul>
+          <li>favorite stations and recently played stations;</li>
+          <li>appearance, autoplay, shake-to-shuffle, and other App preferences;</li>
+          <li>cached station-directory information; and</li>
+          <li>local records used to display your station votes.</li>
+        </ul>
+
+        <h3>Network information</h3>
+        <p>When the App connects to a station directory, a radio stream, station artwork, Apple services, or another linked service, that provider may receive technical information normally sent with an internet request, such as your IP address, request time, and basic connection or device information. Radio does not operate a server that stores this information.</p>
+      </section>
+
+      <section id="use" class="policy-section" data-searchable>
+        <h2>2. How Information Is Used</h2>
+        <p>Information stored by the App is used only to provide its features, including remembering favorites and settings, displaying listening history, loading station lists more quickly, playing audio, and showing playback controls.</p>
+        <p>Search terms, the country or genre you select, and station vote actions are sent to the station-directory provider only when needed to return results or complete the requested action.</p>
+      </section>
+
+      <section id="third-parties" class="policy-section" data-searchable>
+        <h2>3. Third-Party Services</h2>
+        <p>Radio relies on independent services to provide requested content and functionality:</p>
+        <ul>
+          <li><strong>Radio Browser</strong> supplies station-directory data, search results, and station voting.</li>
+          <li><strong>Radio stations and stream hosts</strong> deliver the live audio streams and related artwork or websites you choose to access.</li>
+          <li><strong>Apple ShazamKit</strong> processes audio information when you explicitly start song recognition.</li>
+          <li><strong>Apple services</strong> may be opened for recognized music, App Store version checks, reviews, or other system features you request.</li>
+        </ul>
+        <p>These providers operate independently and process information under their own terms and privacy policies. You should review their policies if you want more detail about their practices.</p>
+      </section>
+
+      <section id="sharing" class="policy-section" data-searchable>
+        <h2>4. Data Sharing and Disclosure</h2>
+        <p>We do not sell or rent personal information. The App shares requests with third-party services only as needed to perform actions you initiate, such as searching for a station, starting a stream, voting, recognizing a song, opening a station website, or sharing a station through the iOS share sheet.</p>
+        <p>Information you choose to share through another app is handled by that app and by Apple’s system sharing features.</p>
+      </section>
+
+      <section id="storage" class="policy-section" data-searchable>
+        <h2>5. On-Device Storage and Retention</h2>
+        <p>Favorites, listening history, preferences, and cached directory data remain on your device until they are changed by you, replaced by newer data, or removed when you delete the App. Radio does not currently synchronize this information to an account or cloud service.</p>
+      </section>
+
+      <section id="children" class="policy-section" data-searchable>
+        <h2>6. Children’s Privacy</h2>
+        <p>Radio is not directed to children under 13, and we do not knowingly collect personal information from children. Radio stations and linked services may offer content outside our control, so parental supervision is recommended.</p>
+      </section>
+
+      <section id="rights" class="policy-section" data-searchable>
+        <h2>7. Your Choices and Privacy Rights</h2>
+        <p>You can remove favorites in the App, change App preferences at any time, stop playback, choose not to use song recognition, and delete locally stored App information by deleting the App from your device.</p>
+        <p>Requests concerning information processed by a radio station, Radio Browser, Apple, or another provider should be directed to that provider.</p>
+      </section>
+
+      <section id="security" class="policy-section" data-searchable>
+        <h2>8. Security</h2>
+        <p>We limit the information handled by Radio and keep App preferences and library data on your device. No method of electronic processing or transmission is completely secure, and third-party services remain responsible for the security of their own systems.</p>
+      </section>
+
+      <section id="changes" class="policy-section" data-searchable>
+        <h2>9. Changes to This Privacy Policy</h2>
+        <p>We may update this Privacy Policy when the App, its services, or legal requirements change. The revised policy will be posted with a new “Last Updated” date. Continued use of the App after an update means the revised policy applies to your future use.</p>
+      </section>
+
+      <section id="contact" class="policy-section" data-searchable>
+        <h2>10. Contact Us</h2>
+        <p>If you have questions or concerns about this Privacy Policy, please use the developer support contact shown on Radio’s App Store product page.</p>
+      </section>
+
+      <div id="no-results" class="no-results" role="status">No policy sections match your search.</div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-intro">
+        <a class="brand footer-brand" href="#top">
+          <span>Radio</span>
+        </a>
+        <p class="footer-copy">Discover and listen to live radio stations from around the world—without an account.</p>
+      </div>
+      <div>
+        <p class="footer-heading">Quick links</p>
+        <ul class="footer-links">
+          <li><a href="#top">Privacy Policy</a></li>
+          <li><a href="../terms-of-service/">Terms of Service</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-heading">Features</p>
+        <ul class="footer-links">
+          <li><a href="#third-parties">Live radio</a></li>
+          <li><a href="#third-parties">Song recognition</a></li>
+          <li><a href="#storage">Local library</a></li>
+        </ul>
+      </div>
+      <div class="copyright">© 2026 Radio. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    const searchInput = document.querySelector('#policy-search');
+    const sections = [...document.querySelectorAll('[data-searchable]')];
+    const noResults = document.querySelector('#no-results');
+
+    searchInput.addEventListener('input', () => {
+      const query = searchInput.value.trim().toLocaleLowerCase();
+      let visibleCount = 0;
+
+      sections.forEach((section) => {
+        const matches = !query || section.textContent.toLocaleLowerCase().includes(query);
+        section.hidden = !matches;
+        if (matches) visibleCount += 1;
+      });
+
+      noResults.style.display = visibleCount ? 'none' : 'block';
+    });
+  </script>
+</body>
+</html>
