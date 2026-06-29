@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Terms of Service for the Radio app.">
+  <title>Terms of Service · Radio</title>
+  <style>
+    :root {
+      --page: #f8f9fc;
+      --surface: rgba(255, 255, 255, 0.86);
+      --surface-solid: #ffffff;
+      --text: #151524;
+      --muted: #626477;
+      --line: #e4e5ec;
+      --primary: #4338ca;
+      --primary-soft: #eeedff;
+      --accent: #22c55e;
+      --shadow: 0 18px 60px rgba(30, 27, 75, 0.08);
+      --content: 1110px;
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      min-width: 320px;
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 12% -10%, rgba(67, 56, 202, 0.11), transparent 28rem),
+        var(--page);
+      font-size: 16px;
+      line-height: 1.72;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--primary); }
+    a:hover { text-decoration-thickness: 2px; }
+    button, input { font: inherit; }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid rgba(228, 229, 236, 0.86);
+      background: rgba(248, 249, 252, 0.82);
+      backdrop-filter: blur(20px) saturate(150%);
+      -webkit-backdrop-filter: blur(20px) saturate(150%);
+    }
+
+    .header-inner,
+    .page,
+    .footer-inner {
+      width: min(calc(100% - 40px), var(--content));
+      margin-inline: auto;
+    }
+
+    .header-inner {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      color: var(--text);
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing: -0.035em;
+      text-decoration: none;
+    }
+
+    .search {
+      position: relative;
+      width: min(310px, 40vw);
+    }
+
+    .search svg {
+      position: absolute;
+      top: 50%;
+      left: 14px;
+      width: 18px;
+      transform: translateY(-50%);
+      color: var(--muted);
+      pointer-events: none;
+    }
+
+    .search input {
+      width: 100%;
+      height: 42px;
+      padding: 0 14px 0 42px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      outline: none;
+      color: var(--text);
+      background: var(--surface-solid);
+      transition: border-color 160ms ease, box-shadow 160ms ease;
+    }
+
+    .search input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 4px rgba(67, 56, 202, 0.11);
+    }
+
+    .page {
+      display: grid;
+      grid-template-columns: 230px minmax(0, 1fr);
+      gap: 54px;
+      padding-block: 66px 96px;
+    }
+
+    .toc {
+      position: sticky;
+      top: 112px;
+      align-self: start;
+    }
+
+    .toc-label {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 0.74rem;
+      font-weight: 750;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    .toc a {
+      display: block;
+      padding: 7px 10px;
+      border-radius: 8px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.35;
+      text-decoration: none;
+    }
+
+    .toc a:hover,
+    .toc a:focus-visible {
+      color: var(--primary);
+      background: var(--primary-soft);
+    }
+
+    .terms {
+      min-width: 0;
+      padding: clamp(28px, 5vw, 58px);
+      border: 1px solid rgba(228, 229, 236, 0.9);
+      border-radius: 26px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 14px;
+      color: var(--primary);
+      font-size: 0.8rem;
+      font-weight: 750;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.4rem, 6vw, 4.5rem);
+      line-height: 1.03;
+      letter-spacing: -0.055em;
+    }
+
+    .updated {
+      margin: 18px 0 30px;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .intro {
+      margin: 0;
+      color: #353649;
+      font-size: 1.09rem;
+    }
+
+    .notice {
+      margin: 30px 0 0;
+      padding: 20px 22px;
+      border: 1px solid rgba(67, 56, 202, 0.16);
+      border-left: 4px solid var(--primary);
+      border-radius: 12px;
+      background: var(--primary-soft);
+    }
+
+    .notice strong { display: block; margin-bottom: 3px; }
+
+    .terms-section {
+      scroll-margin-top: 112px;
+      padding-top: 42px;
+    }
+
+    .terms-section + .terms-section {
+      margin-top: 42px;
+      border-top: 1px solid var(--line);
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      font-size: 1.35rem;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+    p { margin: 0 0 16px; }
+
+    ul {
+      margin: 12px 0 18px;
+      padding-left: 1.35rem;
+    }
+
+    li { margin: 8px 0; padding-left: 4px; }
+    .terms-section[hidden] { display: none; }
+
+    .no-results {
+      display: none;
+      margin-top: 34px;
+      padding: 24px;
+      border: 1px dashed var(--line);
+      border-radius: 14px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .site-footer {
+      color: #d7d9e8;
+      background: #0f0f23;
+    }
+
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 46px;
+      padding-block: 54px 30px;
+    }
+
+    .footer-brand { color: white; }
+
+    .footer-copy {
+      max-width: 470px;
+      margin: 17px 0 0;
+      color: #aeb1c8;
+      font-size: 0.94rem;
+    }
+
+    .footer-heading {
+      margin: 4px 0 13px;
+      color: white;
+      font-size: 0.82rem;
+      font-weight: 750;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .footer-links { margin: 0; padding: 0; list-style: none; }
+    .footer-links li { margin: 8px 0; padding: 0; }
+    .footer-links a { color: #c6c8d8; text-decoration: none; }
+    .footer-links a:hover { color: white; }
+
+    .copyright {
+      grid-column: 1 / -1;
+      margin-top: 12px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.11);
+      color: #898da7;
+      font-size: 0.84rem;
+    }
+
+    @media (max-width: 800px) {
+      .header-inner,
+      .page,
+      .footer-inner { width: min(calc(100% - 28px), var(--content)); }
+      .header-inner { min-height: 68px; }
+      .search { width: min(220px, 48vw); }
+      .page { display: block; padding-block: 34px 62px; }
+      .toc { display: none; }
+      .terms { border-radius: 20px; }
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+      .footer-intro { grid-column: 1 / -1; }
+    }
+
+    @media (max-width: 520px) {
+      .search { width: calc(100% - 58px); }
+      .terms { padding: 25px 20px 34px; }
+      .footer-inner { grid-template-columns: 1fr; gap: 28px; }
+      .footer-intro,
+      .copyright { grid-column: auto; }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --page: #0f0f23;
+        --surface: rgba(30, 27, 75, 0.44);
+        --surface-solid: #1b1938;
+        --text: #f8fafc;
+        --muted: #a9acc2;
+        --line: rgba(248, 250, 252, 0.13);
+        --primary: #9f98ff;
+        --primary-soft: rgba(67, 56, 202, 0.21);
+        --shadow: 0 22px 70px rgba(0, 0, 0, 0.22);
+      }
+
+      body { background: radial-gradient(circle at 12% -10%, rgba(67, 56, 202, 0.34), transparent 30rem), var(--page); }
+      .site-header { background: rgba(15, 15, 35, 0.8); border-bottom-color: var(--line); }
+      .intro { color: #d9dbea; }
+      .notice { border-color: rgba(159, 152, 255, 0.25); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      * { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="Radio home">
+        <span class="brand-text">Radio</span>
+      </a>
+      <label class="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle>
+          <path d="m20 20-4-4"></path>
+        </svg>
+        <span style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0">Search these terms</span>
+        <input id="terms-search" type="search" placeholder="Search these terms…" autocomplete="off">
+      </label>
+    </div>
+  </header>
+
+  <main id="top" class="page">
+    <nav class="toc" aria-label="Terms of Service sections">
+      <p class="toc-label">On this page</p>
+      <a href="#acceptance">Acceptance</a>
+      <a href="#eligibility">Eligibility</a>
+      <a href="#license">License and permitted use</a>
+      <a href="#acceptable-use">Acceptable use</a>
+      <a href="#third-parties">Third-party services</a>
+      <a href="#intellectual-property">Intellectual property</a>
+      <a href="#local-data">Local data and choices</a>
+      <a href="#availability">Service availability</a>
+      <a href="#costs">Data and service costs</a>
+      <a href="#warranties">Disclaimer of warranties</a>
+      <a href="#liability">Limitation of liability</a>
+      <a href="#termination">Termination</a>
+      <a href="#changes">Changes to these terms</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <article class="terms">
+      <p class="eyebrow">Radio app</p>
+      <h1>Terms of Service</h1>
+      <p class="updated">Last Updated: June 29, 2026</p>
+      <p class="intro">These Terms of Service (“Terms”) govern your use of the Radio mobile application (the “App”). Please read them carefully before using the App.</p>
+
+      <div class="notice">
+        <strong>Agreement to these Terms</strong>
+        By downloading, accessing, or using Radio, you agree to these Terms and our <a href="../privacy-policy/">Privacy Policy</a>. If you do not agree, do not use the App.
+      </div>
+
+      <section id="acceptance" class="terms-section" data-searchable>
+        <h2>1. Acceptance of Terms</h2>
+        <p>These Terms form an agreement concerning your use of Radio. Your use of the App is also subject to applicable App Store rules and to any mandatory rights available under the laws where you live.</p>
+      </section>
+
+      <section id="eligibility" class="terms-section" data-searchable>
+        <h2>2. Eligibility</h2>
+        <p>You may use Radio only if you can legally agree to these Terms. If you are under the age of legal majority where you live, you should use the App only with permission and supervision from a parent or legal guardian.</p>
+        <p>The App provides access to third-party live radio content that may not be suitable for every age group. Parents and guardians are responsible for supervising minors’ use of the App.</p>
+      </section>
+
+      <section id="license" class="terms-section" data-searchable>
+        <h2>3. License and Permitted Use</h2>
+        <p>Subject to these Terms, you receive a limited, personal, non-exclusive, non-transferable, and revocable license to install and use Radio on supported Apple devices for lawful, non-commercial purposes.</p>
+        <p>Radio does not require an account. The license gives you permission to use the App; it does not transfer ownership of the App or any third-party content.</p>
+      </section>
+
+      <section id="acceptable-use" class="terms-section" data-searchable>
+        <h2>4. Acceptable Use</h2>
+        <p>You agree not to:</p>
+        <ul>
+          <li>use the App in violation of applicable laws or third-party rights;</li>
+          <li>interfere with the App, station directory, radio streams, or related services;</li>
+          <li>attempt to bypass access controls, security measures, or technical limitations;</li>
+          <li>use automated systems to place unreasonable load on third-party services;</li>
+          <li>copy, sell, sublicense, redistribute, or commercially exploit the App except where permitted by law; or</li>
+          <li>reverse engineer or modify the App except to the limited extent such restrictions are prohibited by applicable law.</li>
+        </ul>
+      </section>
+
+      <section id="third-parties" class="terms-section" data-searchable>
+        <h2>5. Third-Party Content and Services</h2>
+        <p>Radio helps you discover and access services operated by others, including Radio Browser, radio stations and stream hosts, station websites, Apple ShazamKit, Apple Music, the App Store, and AirPlay destinations.</p>
+        <p>Third-party services are independent from Radio. Their own terms and privacy policies govern your interactions with them. We do not control and are not responsible for:</p>
+        <ul>
+          <li>the content, views, advertising, accuracy, legality, or suitability of any broadcast;</li>
+          <li>the availability, quality, security, or continuity of any station or stream;</li>
+          <li>changes to station names, artwork, URLs, formats, or schedules; or</li>
+          <li>actions taken by third-party services.</li>
+        </ul>
+        <p>A station’s presence in Radio does not imply endorsement, partnership, ownership, or verification unless the App explicitly states otherwise.</p>
+      </section>
+
+      <section id="intellectual-property" class="terms-section" data-searchable>
+        <h2>6. Intellectual Property</h2>
+        <p>Radio, including its original interface, code, design, and branding, is protected by applicable intellectual-property laws. You may not reproduce, modify, distribute, or create derivative works from the App except as permitted by these Terms or by law.</p>
+        <p>Radio station names, broadcasts, logos, artwork, trademarks, music, and other third-party content belong to their respective owners. We do not claim ownership of third-party content made accessible through the App.</p>
+      </section>
+
+      <section id="local-data" class="terms-section" data-searchable>
+        <h2>7. Local Data and Your Choices</h2>
+        <p>Favorites, listening history, settings, cached station information, and local vote records are stored on your device as described in our <a href="../privacy-policy/">Privacy Policy</a>. Radio does not currently provide an account or cloud backup for this information.</p>
+        <p>You are responsible for maintaining your device and any backups you choose to create. Deleting the App may permanently remove its locally stored information.</p>
+      </section>
+
+      <section id="availability" class="terms-section" data-searchable>
+        <h2>8. Service Availability and Changes</h2>
+        <p>Live radio depends on your internet connection and on third-party infrastructure. Stations may become unavailable, change format, restrict access by location, or stop operating without notice.</p>
+        <p>We may change, add, remove, suspend, or discontinue App features at any time. We do not guarantee that every feature, station, stream format, device, operating-system version, or geographic region will remain supported.</p>
+      </section>
+
+      <section id="costs" class="terms-section" data-searchable>
+        <h2>9. Data and Service Costs</h2>
+        <p>Streaming audio can use significant mobile or broadband data. Your mobile carrier, internet provider, Apple, or a third-party service may charge fees under your agreement with them. You are responsible for those charges and for monitoring your data usage.</p>
+      </section>
+
+      <section id="warranties" class="terms-section" data-searchable>
+        <h2>10. Disclaimer of Warranties</h2>
+        <p>To the fullest extent permitted by law, Radio is provided “as is” and “as available,” without express or implied warranties. We do not guarantee that the App will be uninterrupted, error-free, secure, accurate, compatible with every stream, or free from harmful components.</p>
+        <p>Nothing in these Terms excludes warranties or consumer rights that cannot legally be excluded.</p>
+      </section>
+
+      <section id="liability" class="terms-section" data-searchable>
+        <h2>11. Limitation of Liability</h2>
+        <p>To the fullest extent permitted by law, we will not be liable for indirect, incidental, special, consequential, exemplary, or punitive damages, or for loss of data, profits, goodwill, access, or business opportunity arising from your use of or inability to use Radio or any third-party service.</p>
+        <p>We are not responsible for third-party broadcasts, station availability, network interruptions, external websites, recognition results, or actions you take based on third-party content. These limitations do not apply where liability cannot legally be limited or excluded.</p>
+      </section>
+
+      <section id="termination" class="terms-section" data-searchable>
+        <h2>12. Termination</h2>
+        <p>You may stop using Radio at any time by discontinuing use and uninstalling the App. Because Radio does not require an account, there is no account to close.</p>
+        <p>Your permission to use the App ends automatically if you materially violate these Terms. Provisions that by their nature should survive termination—including intellectual-property, disclaimer, and liability provisions—will continue to apply.</p>
+      </section>
+
+      <section id="changes" class="terms-section" data-searchable>
+        <h2>13. Changes to These Terms</h2>
+        <p>We may update these Terms when the App, its services, or legal requirements change. Updated Terms will be posted with a revised “Last Updated” date. Your continued use of Radio after updated Terms take effect constitutes acceptance of those Terms.</p>
+      </section>
+
+      <section id="contact" class="terms-section" data-searchable>
+        <h2>14. Contact Us</h2>
+        <p>If you have questions about these Terms, please use the developer support contact shown on Radio’s App Store product page.</p>
+      </section>
+
+      <div id="no-results" class="no-results" role="status">No terms match your search.</div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-intro">
+        <a class="brand footer-brand" href="#top">
+          <span>Radio</span>
+        </a>
+        <p class="footer-copy">Discover and listen to live radio stations from around the world—without an account.</p>
+      </div>
+      <div>
+        <p class="footer-heading">Resources</p>
+        <ul class="footer-links">
+          <li><a href="../privacy-policy/">Privacy Policy</a></li>
+          <li><a href="#top">Terms of Service</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-heading">Features</p>
+        <ul class="footer-links">
+          <li><a href="#third-parties">Live radio</a></li>
+          <li><a href="#third-parties">Song recognition</a></li>
+          <li><a href="#local-data">Local library</a></li>
+        </ul>
+      </div>
+      <div class="copyright">© 2026 Radio. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    const searchInput = document.querySelector('#terms-search');
+    const sections = [...document.querySelectorAll('[data-searchable]')];
+    const noResults = document.querySelector('#no-results');
+
+    searchInput.addEventListener('input', () => {
+      const query = searchInput.value.trim().toLocaleLowerCase();
+      let visibleCount = 0;
+
+      sections.forEach((section) => {
+        const matches = !query || section.textContent.toLocaleLowerCase().includes(query);
+        section.hidden = !matches;
+        if (matches) visibleCount += 1;
+      });
+
+      noResults.style.display = visibleCount ? 'none' : 'block';
+    });
+  </script>
+</body>
+</html>
