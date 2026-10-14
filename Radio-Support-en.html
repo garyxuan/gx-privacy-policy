@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Contact Radioo support for iPhone, iPad, and Mac. Get help with playback, purchases, captions, and translation, or share feedback and feature requests.">
+  <title>Radioo Support · iPhone, iPad &amp; Mac</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --page: #faf9f7;
+      --surface: #ffffff;
+      --text: #22211f;
+      --muted: #65615b;
+      --line: #dedbd5;
+      --accent: #c3381c;
+      --contact-surface: #22211f;
+      --contact-text: #faf9f7;
+      --contact-muted: #c9c4bc;
+      --contact-accent: #fe9f79;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--text);
+      background: var(--page);
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); text-underline-offset: 4px; }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible, summary:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 5px;
+      border-radius: 3px;
+    }
+    .wrap { width: min(100% - 48px, 1000px); margin-inline: auto; }
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 24px;
+      padding: 10px 16px;
+      background: var(--surface);
+      z-index: 1;
+    }
+    .skip-link:focus { top: 12px; }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding-block: 27px;
+      border-bottom: 1px solid var(--line);
+    }
+    .brand { font-size: 25px; font-weight: 750; letter-spacing: -1px; }
+    .brand-dot { color: var(--accent); }
+    .header-label { color: var(--muted); font-size: 14px; }
+    main { padding-block: 68px 56px; }
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+    .eyebrow {
+      margin: 0 0 18px;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 0 0 22px;
+      max-width: 9em;
+      font-size: clamp(38px, 5vw, 56px);
+      line-height: 1.08;
+      letter-spacing: -2px;
+      font-weight: 750;
+    }
+    .intro { max-width: 32em; color: var(--muted); font-size: 18px; }
+    .platforms { margin: 26px 0 0; font-size: 14px; font-weight: 600; }
+    .contact {
+      padding: 32px;
+      border-radius: 20px;
+      color: var(--contact-text);
+      background: var(--contact-surface);
+    }
+    .contact h2 { margin: 0 0 8px; font-size: 20px; letter-spacing: -0.4px; }
+    .contact p { margin: 0; color: var(--contact-muted); }
+    .email {
+      display: block;
+      width: fit-content;
+      min-height: 44px;
+      margin-block: 20px;
+      padding-block: 4px;
+      color: var(--contact-accent);
+      font-size: clamp(21px, 3vw, 28px);
+      line-height: 1.4;
+      font-weight: 650;
+      letter-spacing: -0.5px;
+      overflow-wrap: anywhere;
+    }
+    .contact .hint { font-size: 14px; }
+    .contact a:focus-visible { outline-color: var(--contact-accent); }
+    .section { margin-top: 56px; padding-top: 32px; border-top: 1px solid var(--line); }
+    h2 { margin: 0 0 16px; font-size: 24px; line-height: 1.3; letter-spacing: -0.6px; }
+    p { margin: 0 0 16px; }
+    .section-intro { color: var(--muted); }
+    .checklist {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 28px;
+      margin: 26px 0 0;
+      padding-left: 24px;
+    }
+    .checklist li { padding-left: 5px; }
+    .checklist li::marker { color: var(--accent); font-weight: 650; }
+    .checklist strong { display: block; margin-bottom: 6px; }
+    .checklist p { color: var(--muted); font-size: 15px; }
+    details { border-top: 1px solid var(--line); }
+    details:last-child { border-bottom: 1px solid var(--line); }
+    summary {
+      min-height: 56px;
+      padding: 18px 4px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    details p { max-width: 76ch; padding: 0 4px 8px; color: var(--muted); }
+    footer {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px 24px;
+      padding-block: 20px 32px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+    footer p { margin: 0; }
+    footer nav { display: flex; flex-wrap: wrap; gap: 8px 24px; }
+    footer a { display: inline-flex; align-items: center; min-height: 44px; }
+
+    @media (max-width: 720px) {
+      .wrap { width: min(100% - 40px, 1000px); }
+      .header { padding-block: 20px; }
+      main { padding-top: 40px; }
+      .hero { grid-template-columns: 1fr; gap: 28px; }
+      h1 { max-width: 12em; }
+      .contact { padding: 26px; }
+      .checklist { grid-template-columns: 1fr; gap: 10px; }
+      .section { margin-top: 40px; }
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --page: #171615;
+        --surface: #242220;
+        --text: #f5f2ed;
+        --muted: #b8b2a9;
+        --line: #413d38;
+        --accent: #fe9f79;
+        --contact-surface: #2b2825;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to support</a>
+  <header class="header wrap">
+    <span class="brand">Radioo<span class="brand-dot" aria-hidden="true">.</span></span>
+    <span class="header-label">Help &amp; Support</span>
+  </header>
+
+  <main id="main" class="wrap">
+    <div class="hero">
+      <div>
+        <p class="eyebrow">Radioo Support</p>
+        <h1>How can we help?</h1>
+        <p class="intro">Get help with Radioo, report a problem, or share an idea for a future update. Contact us directly by email.</p>
+        <p class="platforms">For iPhone, iPad, and Mac</p>
+      </div>
+
+      <section class="contact" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Contact support</h2>
+        <p>Questions, feedback, and feature requests are welcome.</p>
+        <a class="email" href="mailto:garyxuan@163.com?subject=Radioo%20Support">garyxuan@163.com</a>
+        <p class="hint">Click the address to open your email app, or copy it into your preferred email service.</p>
+      </section>
+    </div>
+
+    <section class="section" aria-labelledby="report-heading">
+      <h2 id="report-heading">Tell us what happened</h2>
+      <p class="section-intro">If you are reporting an issue, these details help us investigate:</p>
+      <ol class="checklist">
+        <li>
+          <strong>Your device and versions</strong>
+          <p>Your iPhone, iPad, or Mac model, iOS / iPadOS / macOS version, and Radioo version.</p>
+        </li>
+        <li>
+          <strong>The steps and the result</strong>
+          <p>What you were doing, what you expected, and what happened instead. Include the station name if relevant.</p>
+        </li>
+        <li>
+          <strong>A little more context</strong>
+          <p>Any error message or a screenshot, if helpful. Please leave out passwords and payment details.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section" aria-labelledby="help-heading">
+      <h2 id="help-heading">Common questions</h2>
+      <details>
+        <summary>A station will not play. What can I try?</summary>
+        <p>Check your internet connection and try another station. Individual stations may be temporarily offline or restrict access in some regions. If the problem continues, email us the station name, your device, and any error message you see.</p>
+      </details>
+      <details>
+        <summary>How do I restore my Premium purchase?</summary>
+        <p>Make sure the App Store is signed in to the Apple Account used for your purchase. Open the Radioo Premium screen and choose Restore Purchases. If your purchase is still unavailable, contact us with your device, Radioo version, and any message shown during restoration.</p>
+      </details>
+      <details>
+        <summary>Why are captions or translation unavailable?</summary>
+        <p>Availability depends on your system version, device, selected languages, and Premium access. Some features also require system language downloads. For help, send us those details and any message shown in Radioo.</p>
+      </details>
+      <details>
+        <summary>Can I suggest a feature or report a station issue?</summary>
+        <p>Yes. Email us your suggestion or describe the station issue. Please include the station name and country or region so we can identify it.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <p>© 2026 Radioo</p>
+    <nav aria-label="Legal information">
+      <a href="https://garyxuan.github.io/gx-privacy-policy/Radio-Privacy-en.html">Privacy Policy</a>
+      <a href="https://garyxuan.github.io/gx-privacy-policy/Radio-Terms-en.html">Terms of Service</a>
+    </nav>
+  </footer>
+</body>
+</html>

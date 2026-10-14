@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="联系 Radioo 技术支持，获取 iPhone、iPad 和 Mac 上的播放、购买、字幕与翻译帮助，或提交问题反馈和功能建议。">
+  <title>Radioo 技术支持 · iPhone、iPad 与 Mac</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --page: #faf9f7;
+      --surface: #ffffff;
+      --text: #22211f;
+      --muted: #65615b;
+      --line: #dedbd5;
+      --accent: #c3381c;
+      --contact-surface: #22211f;
+      --contact-text: #faf9f7;
+      --contact-muted: #c9c4bc;
+      --contact-accent: #fe9f79;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--text);
+      background: var(--page);
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); text-underline-offset: 4px; }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible, summary:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 5px;
+      border-radius: 3px;
+    }
+    .wrap { width: min(100% - 48px, 1000px); margin-inline: auto; }
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 24px;
+      padding: 10px 16px;
+      background: var(--surface);
+      z-index: 1;
+    }
+    .skip-link:focus { top: 12px; }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding-block: 27px;
+      border-bottom: 1px solid var(--line);
+    }
+    .brand { font-size: 25px; font-weight: 750; letter-spacing: -1px; }
+    .brand-dot { color: var(--accent); }
+    .header-label { color: var(--muted); font-size: 14px; }
+    main { padding-block: 68px 56px; }
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+    .eyebrow {
+      margin: 0 0 18px;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 0 0 22px;
+      max-width: 9em;
+      font-size: clamp(38px, 5vw, 56px);
+      line-height: 1.3;
+      letter-spacing: -0.5px;
+      font-weight: 750;
+    }
+    .intro { max-width: 32em; color: var(--muted); font-size: 18px; }
+    .platforms { margin: 26px 0 0; font-size: 14px; font-weight: 600; }
+    .contact {
+      padding: 32px;
+      border-radius: 20px;
+      color: var(--contact-text);
+      background: var(--contact-surface);
+    }
+    .contact h2 { margin: 0 0 8px; font-size: 20px; letter-spacing: -0.4px; }
+    .contact p { margin: 0; color: var(--contact-muted); }
+    .email {
+      display: block;
+      width: fit-content;
+      min-height: 44px;
+      margin-block: 20px;
+      padding-block: 4px;
+      color: var(--contact-accent);
+      font-size: clamp(21px, 3vw, 28px);
+      line-height: 1.4;
+      font-weight: 650;
+      letter-spacing: -0.5px;
+      overflow-wrap: anywhere;
+    }
+    .contact .hint { font-size: 14px; }
+    .contact a:focus-visible { outline-color: var(--contact-accent); }
+    .section { margin-top: 56px; padding-top: 32px; border-top: 1px solid var(--line); }
+    h2 { margin: 0 0 16px; font-size: 24px; line-height: 1.3; letter-spacing: -0.6px; }
+    p { margin: 0 0 16px; }
+    .section-intro { color: var(--muted); }
+    .checklist {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 28px;
+      margin: 26px 0 0;
+      padding-left: 24px;
+    }
+    .checklist li { padding-left: 5px; }
+    .checklist li::marker { color: var(--accent); font-weight: 650; }
+    .checklist strong { display: block; margin-bottom: 6px; }
+    .checklist p { color: var(--muted); font-size: 15px; }
+    details { border-top: 1px solid var(--line); }
+    details:last-child { border-bottom: 1px solid var(--line); }
+    summary {
+      min-height: 56px;
+      padding: 18px 4px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    details p { max-width: 76ch; padding: 0 4px 8px; color: var(--muted); }
+    footer {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px 24px;
+      padding-block: 20px 32px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+    footer p { margin: 0; }
+    footer nav { display: flex; flex-wrap: wrap; gap: 8px 24px; }
+    footer a { display: inline-flex; align-items: center; min-height: 44px; }
+
+    @media (max-width: 720px) {
+      .wrap { width: min(100% - 40px, 1000px); }
+      .header { padding-block: 20px; }
+      main { padding-top: 40px; }
+      .hero { grid-template-columns: 1fr; gap: 28px; }
+      h1 { max-width: 12em; }
+      .contact { padding: 26px; }
+      .checklist { grid-template-columns: 1fr; gap: 10px; }
+      .section { margin-top: 40px; }
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --page: #171615;
+        --surface: #242220;
+        --text: #f5f2ed;
+        --muted: #b8b2a9;
+        --line: #413d38;
+        --accent: #fe9f79;
+        --contact-surface: #2b2825;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳转到支持内容</a>
+  <header class="header wrap">
+    <span class="brand">Radioo<span class="brand-dot" aria-hidden="true">.</span></span>
+    <span class="header-label">帮助与支持</span>
+  </header>
+
+  <main id="main" class="wrap">
+    <div class="hero">
+      <div>
+        <p class="eyebrow">Radioo 技术支持</p>
+        <h1>需要什么帮助？</h1>
+        <p class="intro">无论是使用中遇到问题，还是有新的功能建议，都欢迎通过邮件直接联系我们。</p>
+        <p class="platforms">适用于 iPhone、iPad 和 Mac</p>
+      </div>
+
+      <section class="contact" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">联系技术支持</h2>
+        <p>欢迎咨询使用问题、反馈故障或提出功能建议。</p>
+        <a class="email" href="mailto:garyxuan@163.com?subject=Radioo%20%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81">garyxuan@163.com</a>
+        <p class="hint">点击邮箱地址即可打开邮件应用，也可以复制地址，使用你常用的邮箱发送邮件。</p>
+      </section>
+    </div>
+
+    <section class="section" aria-labelledby="report-heading">
+      <h2 id="report-heading">告诉我们你遇到的问题</h2>
+      <p class="section-intro">反馈问题时，以下信息可以帮助我们排查：</p>
+      <ol class="checklist">
+        <li>
+          <strong>设备与版本</strong>
+          <p>iPhone、iPad 或 Mac 的设备型号、iOS / iPadOS / macOS 系统版本，以及 Radioo 版本。</p>
+        </li>
+        <li>
+          <strong>操作步骤与结果</strong>
+          <p>你进行了哪些操作、预期得到什么结果，以及实际发生了什么。如果涉及某个电台，请附上电台名称。</p>
+        </li>
+        <li>
+          <strong>补充信息</strong>
+          <p>如有错误提示或相关截图，也请一并提供。请勿包含密码或付款信息。</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section" aria-labelledby="help-heading">
+      <h2 id="help-heading">常见问题</h2>
+      <details>
+        <summary>电台无法播放，怎么办？</summary>
+        <p>请先检查网络连接，并尝试播放其他电台。个别电台可能暂时离线，或限制部分地区访问。如果问题持续，请通过邮件提供电台名称、你的设备信息和出现的错误提示。</p>
+      </details>
+      <details>
+        <summary>如何恢复 Premium 购买？</summary>
+        <p>请确认 App Store 登录的是购买时使用的 Apple 账户，打开 Radioo Premium 页面并选择“恢复购买”。如果仍未恢复，请联系我们，并提供设备信息、Radioo 版本和恢复过程中显示的提示。</p>
+      </details>
+      <details>
+        <summary>为什么字幕或翻译无法使用？</summary>
+        <p>字幕和翻译是否可用，取决于系统版本、设备、所选语言及 Premium 权益。部分功能还需要下载系统语言资源。如需帮助，请提供这些信息，以及 Radioo 中显示的相关提示。</p>
+      </details>
+      <details>
+        <summary>可以提出功能建议或反馈电台问题吗？</summary>
+        <p>可以。欢迎通过邮件分享你的建议，或描述电台存在的问题。反馈电台问题时，请附上电台名称及所属国家或地区，方便我们查找。</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <p>© 2026 Radioo</p>
+    <nav aria-label="法律信息">
+      <a href="https://garyxuan.github.io/gx-privacy-policy/Radio-Privacy-en.html">隐私政策（英文）</a>
+      <a href="https://garyxuan.github.io/gx-privacy-policy/Radio-Terms-en.html">服务条款（英文）</a>
+    </nav>
+  </footer>
+</body>
+</html>
